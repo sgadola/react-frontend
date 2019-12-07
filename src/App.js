@@ -1,16 +1,12 @@
 import React from 'react';
-import './App.css';
-
-import './bootstrap.css';
-
 import TodoApp from './components/ToDo/TodoApp';
 
+import './App.css';
+import './bootstrap.css';
 
-function App() {
+
+export default function App() {
     return (
-        < TodoApp/>
+        <TodoApp/>
     )
 }
-
-
-export default App;

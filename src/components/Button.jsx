@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+// Counter-Button component
+
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 
-class CounterButton extends Component {
+export default class CounterButton extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             counter: 0
@@ -26,12 +28,9 @@ class CounterButton extends Component {
 
 CounterButton.defaultProps = {
     by: 1
-}
+};
 
 
 CounterButton.propTypes = {
     by: PropTypes.number
-}
-
-
-export default CounterButton;
+};

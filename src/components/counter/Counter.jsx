@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+// Main Counter-container component
+
+import React, {Component} from 'react';
 
 import CounterButton from '../Button';
 
 import './Counter.css'
 
 
-class Counter extends Component {
+export default class Counter extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             counter: 0
-        }
+        };
 
         this.increment = this.increment.bind(this);
         this.decrement = this.decrement.bind(this);
@@ -23,11 +25,13 @@ class Counter extends Component {
     render() {
         return (
             <div className="counter">
-                <CounterButton by={1} incrementMethod={this.increment} decrementMethod={this.decrement} />
-                <CounterButton by={5} incrementMethod={this.increment} decrementMethod={this.decrement} />
-                <CounterButton by={10} incrementMethod={this.increment} decrementMethod={this.decrement} />
+                <CounterButton by={1} incrementMethod={this.increment} decrementMethod={this.decrement}/>
+                <CounterButton by={5} incrementMethod={this.increment} decrementMethod={this.decrement}/>
+                <CounterButton by={10} incrementMethod={this.increment} decrementMethod={this.decrement}/>
                 <span className="count">{this.state.counter}</span>
-                <div><button className="reset" onClick={this.reset}>reset</button></div>
+                <div>
+                    <button className="reset" onClick={this.reset}>reset</button>
+                </div>
             </div>
         );
     }
@@ -47,7 +51,7 @@ class Counter extends Component {
 
         this.setState(
             (prevState) => {
-                return { counter: prevState.counter + by }
+                return {counter: prevState.counter + by}
             })
     }
 
@@ -57,10 +61,7 @@ class Counter extends Component {
 
         this.setState(
             (prevState) => {
-                return { counter: prevState.counter - by }
+                return {counter: prevState.counter - by}
             })
     }
 }
-
-
-export default Counter;

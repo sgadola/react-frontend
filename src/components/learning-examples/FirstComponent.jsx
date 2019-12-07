@@ -1,14 +1,10 @@
 import React from 'react';
 
 
-
-function FirstComponent() {
+export default function FirstComponent() {
     return (
-      <div className="App">
-        Erste Komponente.
-      </div>
+        <div className="App">
+            Erste Komponente.
+        </div>
     );
-  }
-
-
-  export default FirstComponent;
+}
