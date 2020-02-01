@@ -10,7 +10,7 @@ export default class LearningComponent extends Component {
     render() {
         return (
             <div>
-                My hello World.
+                My hello world.
                 <FirstComponent/>
                 <SecondComponent/>
                 <ThirdComponent/>

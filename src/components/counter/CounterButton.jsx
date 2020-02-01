@@ -6,15 +6,6 @@ import PropTypes from 'prop-types';
 
 export default class CounterButton extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            counter: 0
-        }
-    }
-
-
     render() {
         return (
             <div className="counter" onClick={this.increment}>

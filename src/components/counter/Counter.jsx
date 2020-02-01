@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 
-import CounterButton from '../Button';
+import CounterButton from './CounterButton';
 
 import './Counter.css'
 
@@ -28,7 +28,9 @@ export default class Counter extends Component {
                 <CounterButton by={1} incrementMethod={this.increment} decrementMethod={this.decrement}/>
                 <CounterButton by={5} incrementMethod={this.increment} decrementMethod={this.decrement}/>
                 <CounterButton by={10} incrementMethod={this.increment} decrementMethod={this.decrement}/>
+
                 <span className="count">{this.state.counter}</span>
+
                 <div>
                     <button className="reset" onClick={this.reset}>reset</button>
                 </div>
